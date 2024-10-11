@@ -1,7 +1,8 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
-export interface InputProps extends React.ComponentPropsWithoutRef<"input"> {}
+// Instead of interface, we use a type alias
+export type InputProps = React.ComponentPropsWithoutRef<"input">;
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, ...props }, ref) => {
